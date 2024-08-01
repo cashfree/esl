@@ -1,0 +1,14 @@
+configmap:
+  name: prod-jarvis
+  namespace: prod-jarvis
+  data:
+    kafka:
+      url: k8s-prod-kafka-bootstrap.kafka:9093
+    messageBroker:
+      url: ssl://c-hsdj0ee-2308-6bbf-a90d-28930e9623fb-1.mq.ap-south-1.amazonaws.com:61617
+      topic: payment
+    s3:
+      bucket: receipts
+  orderServiceUrl: http://order.myspace
+  transactionServiceUrl: http://txn.myspace/v1
+  mysqlUrl: jdbc:mysql://cf-jarvis.mysql.db:3306/jarvis-prod

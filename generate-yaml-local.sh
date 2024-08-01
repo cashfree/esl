@@ -72,4 +72,4 @@ install_maven() {
 install_java
 install_maven
 mvn package
-java -cp target/lib -cp target/esl-1.0.0.jar com.cashfree.esl.parser.EslProcessor sbox qa stage
+java -cp target/lib -cp target/esl-1.0.0.jar com.cashfree.esl.Main $@

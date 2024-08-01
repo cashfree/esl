@@ -8,7 +8,7 @@ else
     exit 1
 fi
 if [ "$SERVICE" = "" ]; then
-    echo "Please set environment variable 'SERVICE' to the path of 'configmap-values' folder"
+    echo "Please set environment variable 'SERVICE' to the directory of 'environments.esl'"
     exit 1
 else
     echo "Processing $SERVICE"
@@ -91,4 +91,4 @@ install_java() {
 }
 
 install_java
-java -cp lib -cp esl-1.0.0.jar com.cashfree.parser.EslProcessor sbox qa stage
+java -cp lib -cp esl-1.0.0.jar com.cashfree.esl.Main $@

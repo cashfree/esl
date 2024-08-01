@@ -113,7 +113,7 @@ class JsonDelegateExt {
     }
 
     def serviceUrl(Map args) {
-        return serviceUrl_(args.get('protocol', 'http'), args.get('name'), args.get('uri', ''), args.get('namespace', args['name']))
+        return serviceUrl_(args.get('protocol', 'http'), args.get('name'), args.get('namespace', args['name']), args.get('uri', ''))
     }
 
     private def serviceUrl_(def protocol, def name, def namespace, def uri) {

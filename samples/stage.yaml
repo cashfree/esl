@@ -1,0 +1,14 @@
+configmap:
+  name: stage-jarvis
+  namespace: stage-jarvis
+  data:
+    kafka:
+      url: k8s-stage-kafka-bootstrap.kafka:9093
+    messageBroker:
+      url: ssl://c-hsdjda5-238b-68c0-b9e3-2ee00dc4c3db-1.mq.ap-south-1.amazonaws.com:61617
+      topic: cf-stage-payment
+    s3:
+      bucket: cf-stage-receipts
+  orderServiceUrl: http://stage-order.stage-myspace
+  transactionServiceUrl: http://stage-txn.stage-myspace/v1
+  mysqlUrl: jdbc:mysql://cf-stage-jarvis.mysql.db:3306/cf_stage_jarvis

@@ -1,0 +1,14 @@
+configmap:
+  name: jarvis-sbox
+  namespace: jarvis-sbox
+  data:
+    kafka:
+      url: k8s-master-kafka-bootstrap.kafka:9093
+    messageBroker:
+      url: ssl://c-hsdj033-23a0-614f-9900-2df1688be756-1.mq.ap-south-1.amazonaws.com:61617
+      topic: cf-sbox-payment
+    s3:
+      bucket: cf-sbox-receipts
+  orderServiceUrl: http://order-gamma.myspace-gamma
+  transactionServiceUrl: http://txn-gamma.myspace-gamma/v1
+  mysqlUrl: jdbc:mysql://cf-sbox-jarvis.mysql.db:3306/cf_sbox_jarvis

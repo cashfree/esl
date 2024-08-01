@@ -446,6 +446,12 @@ However, if you want the override only for sbox and not for sboxdr, then prefix 
 In that case sbox.yaml will have `key2: 999` but sboxdr.yaml will have `key2 888`.
 
 ## FAQ
+### How to use this library?
+### How do I generate yaml files from ESL file?
+Download the esl-1.0.0.jar from github. Place your ESL file in the same directory. Run the following commands
+`export SERVICE=.`
+`generate-yaml-dev.sh \<env1> [,env2...envn]`
+
 ### How can I add a new function to the ESL?
 Add your functions to `JsonDelegateExt.groovy` class
 
@@ -461,5 +467,3 @@ Yes, that is the recommended approach. To verify the change, you can generate th
 ### What is the use of `generate-yaml-local.sh` file?
 If you are a developer enchancing the ESL, then you can run this file to verify language changes. You can also use your IDE directly.
 
-### I have \<env>.yaml files already. Can I generate ESL file out of it?
-Yes, you can check `EslGenerator.groovy` and the `generate-esl-and-yaml.sh` files. Also look at `esl-substitutions.yml` file converting your yaml to ESL.

@@ -1,0 +1,21 @@
+configmap (serviceName: 'jarvis'){
+    name "${env}-jarvis"
+    'sbox:name' "jarvis-sbox"
+    namespace "${env}-jarvis"
+    'sbox:namespace' "jarvis-sbox"
+    data {
+        kafka {
+            url kafkaUrl()
+        }
+        messageBroker {
+            url activeMQUrl()
+            topic messageTopic('payment')
+        }
+        s3 {
+            bucket s3Bucket('receipts')
+        }
+    }
+    orderServiceUrl serviceUrl(name:'order', namespace:'myspace')
+    transactionServiceUrl serviceUrl(name:'txn', namespace:'myspace', uri:'/v1')
+    mysqlUrl mysqlDBUrl('jarvis-prod')
+}
