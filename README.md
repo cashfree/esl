@@ -448,8 +448,9 @@ In that case sbox.yaml will have `key2: 999` but sboxdr.yaml will have `key2 888
 ## FAQ
 ### How to use this library?
 ### How do I generate yaml files from ESL file?
-Download the esl-1.0.0.jar from github. Place your ESL file in the same directory. Run the following commands
+Download the esl-1.0.0.jar from [github](https://github.com/cashfree/esl/releases/download/release-1.0.0/esl-1.0.0.jar). Place your ESL file in the same directory. Run the following commands
 `export SERVICE=.`
+
 `generate-yaml-dev.sh \<env1> [,env2...envn]`
 
 ### How can I add a new function to the ESL?
